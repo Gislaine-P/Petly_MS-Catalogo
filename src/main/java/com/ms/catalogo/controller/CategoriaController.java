@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController 
 @RequestMapping("/api/categoria")
-@CrossOrigin(origins = {"http://localhost:8083", "http://localhost:3306"})
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoriaController {
 
     @Autowired 

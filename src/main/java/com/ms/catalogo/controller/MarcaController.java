@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController 
 @RequestMapping("/api/marca")
-@CrossOrigin(origins = {"http://localhost:8083", "http://localhost:3000"})
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MarcaController {
 
     @Autowired 
