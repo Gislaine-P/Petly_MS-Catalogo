@@ -49,6 +49,9 @@ public class CategoriaService {
     }
 
     public void eliminar(Integer id){
+        if (!categoriaRepository.existsById(id)) {
+            throw new RuntimeException("Categoria no encontrada con el id: " + id);
+        }
         categoriaRepository.deleteById(id);
     }
 }

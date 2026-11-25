@@ -52,6 +52,9 @@ public class MarcaService {
     }
 
     public void eliminar(Integer id){
+        if (!marcaRepository.existsById(id)) {
+            throw new RuntimeException("Marca no encontrada con el id: " + id);
+        }
         marcaRepository.deleteById(id);
     }
 }
